@@ -37,9 +37,8 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', True)) # Set True Or False
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', True)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub)
 
-AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('AUTH_CHANNEL', '-1002043502363 -1002245813234').split()] 
-# give channel id with separate space. Ex: ('-10073828 -102782829 -1007282828')
-
+auth_channels = environ.get('AUTH_CHANNEL', '-1002043502363 -1002245813234')  
+AUTH_CHANNEL = [int(ch) if id_pattern.search(ch) else ch for ch in auth_channels.split()]
 # আগের কোডে যে ভাবে AUTH_CHANNEL এবং EXTRA_AUTH_CHANNELS ডিফাইন করেছিলাম, সেই অনুযায়ী
 #auth_channel = environ.get('AUTH_CHANNEL', '-1002245813234')  # মূল Force Subscribe চ্যানেল
 #AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
