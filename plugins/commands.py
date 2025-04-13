@@ -138,6 +138,13 @@ async def start(client, message):
             parse_mode=enums.ParseMode.MARKDOWN
             )
         return
+
+    if len(message.command) == 2 and message.command[1].startswith('getfile'):
+        searches = message.command[1].split("-", 1)[1] 
+        search = searches.replace('-', ' ')
+        message.text = search 
+        await auto_filter(client, message) 
+        return
                     
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         if PREMIUM_AND_REFERAL_MODE == True:
