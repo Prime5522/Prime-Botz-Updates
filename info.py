@@ -76,10 +76,10 @@ CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://shnayembd1
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', 'pri_Nay1') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
 
 # Links New 
-MOVIE_UPDATE_CHANNEL = os.environ.get("MOVIE_UPDATE_CHANNEL", "-1002430307825")
+MOVIE_UPDATE_CHANNEL = environ.get("MOVIE_UPDATE_CHANNEL", "-1002430307825")
 
 # TMDB এপিআই কি, ফাইল caption/নাম সুন্দর করতে দরকার হয়
-TMDB_API = os.environ.get("TMDB_API", "")
+TMDB_API = environ.get("TMDB_API", "")
 
 # Or
 
