@@ -95,8 +95,7 @@ async def is_subscribed(bot, query):
 
 async def get_status(bot_token):
     try:
-        # বটের স্ট্যাটাস চেক করার জন্য /start কমান্ড পাঠান
-        async with Client("status_check", bot_token=bot_token) as bot:
+        async with Client("status_check", api_id=API_ID, api_hash=API_HASH, bot_token=bot_token) as bot:
             me = await bot.get_me()
             if me:
                 return True
@@ -105,6 +104,7 @@ async def get_status(bot_token):
     except Exception as e:
         print(f"Error checking bot status: {e}")
         return False
+
 
 async def get_poster(query, bulk=False, id=False, file=None):
     if not id:
