@@ -95,7 +95,12 @@ async def is_subscribed(bot, query):
 
 async def get_status(bot_token):
     try:
-        async with Client("status_check", api_id=API_ID, api_hash=API_HASH, bot_token=bot_token) as bot:
+        async with Client(
+            name="status_check",
+            api_id=int(API_ID),                 # Ensure API_ID is int
+            api_hash=str(API_HASH),             # Ensure API_HASH is str
+            bot_token=str(bot_token)            # Ensure bot_token is str
+        ) as bot:
             me = await bot.get_me()
             if me:
                 return True
