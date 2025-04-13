@@ -6,7 +6,7 @@ import logging, asyncio, os, re, random, pytz, aiohttp, requests, string, json, 
 from info import *
 from imdb import Cinemagoer 
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram import enums
+from pyrogram import Client, enums
 from pyrogram.errors import *
 from typing import Union
 from Script import script
