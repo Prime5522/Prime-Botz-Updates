@@ -75,7 +75,14 @@ CLONE_MODE = bool(environ.get('CLONE_MODE', False)) # Set True or False
 CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://shnayembd1:XAuVBX2Se3iFSnwa@cluster0.rha6xvq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # Necessary If clone mode is true
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', 'pri_Nay1') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
 
-# Links
+# Links New 
+MOVIE_UPDATE_CHANNEL = os.environ.get("MOVIE_UPDATE_CHANNEL", "-1002430307825")
+
+# TMDB এপিআই কি, ফাইল caption/নাম সুন্দর করতে দরকার হয়
+TMDB_API = os.environ.get("TMDB_API", "")
+
+# Or
+
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+OG3sftDEbZ9kMzFl')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Prime_Botz')
 MAINCHANL_LNK = environ.get('MAINCHANL_LNK', 'https://t.me/Prime_Movies4U')
